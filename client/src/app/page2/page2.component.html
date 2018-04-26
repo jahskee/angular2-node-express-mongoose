@@ -1,0 +1,38 @@
+<div id='page2'>
+  
+  <div id='contact-view'>
+      View Contact
+      <div id='row2'>
+
+        <div id='photo'>
+          <img src='/assets/page2/images/blank-face.jpeg'>
+        </div>
+        <div id='info'>
+          <table>
+            <tr>
+              <td id='label'>ID</td>
+              <td id='input'><span id="contactId">{{contact._id}}</span></td>
+            </tr>
+            <tr>
+              <td>Firstname</td>
+              <td><input type='text' name='firstname' value='{{contact.firstname}}' placeholder="Firstname" /></td>
+            </tr>
+            <tr>
+              <td>Lastname</td>
+              <td><input type='text' name='lastname' value='{{contact.lastname}}' placeholder="Lastname" /></td>
+            </tr>
+            <tr>
+              <td>Phone</td>
+              <td><input type='text' name='phone' value='{{contact.phone}}' placeholder="Phone" /></td>
+            </tr>
+          </table>
+          <div id='buttons'>
+              <button class="btn btn-secondary" id='btn-update'>Update</button>
+              <button class="btn btn-secondary">Delete</button>
+          </div>
+      </div>
+  </div>
+</div>
+<div class='nav'>
+    <a routerLink='/page1' routerLinkActive='active'><< Back >></a>
+</div>

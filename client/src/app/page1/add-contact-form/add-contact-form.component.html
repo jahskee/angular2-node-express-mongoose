@@ -1,0 +1,11 @@
+<div id="add-contact-form">
+  <form #form='ngForm' (ngSubmit)="clickAddContact(form.value)">
+    <div>New Contact</div>
+    <div>
+      <input type='text' name='firstname' placeholder="Firstname" ngModel required/>    
+      <input type='text' name='lastname' placeholder="Lastname" ngModel required/>
+      <input type='text' name='phone' placeholder="Phone" ngModel required/>
+    </div>
+    <button type='submit' class="btn btn-secondary" [disabled]="!form.form.valid"> Add Contact </button>    
+  </form>
+</div>
