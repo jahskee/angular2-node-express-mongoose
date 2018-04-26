@@ -1,11 +1,27 @@
-<div id="add-contact-form">
-  <form #form='ngForm' (ngSubmit)="clickAddContact(form.value)">
+<div id="add-contact-form" >
+  <form (ngSubmit)='onSubmit(contact)' [formGroup]='contact' >
     <div>New Contact</div>
     <div>
-      <input type='text' name='firstname' placeholder="Firstname" ngModel required/>    
-      <input type='text' name='lastname' placeholder="Lastname" ngModel required/>
-      <input type='text' name='phone' placeholder="Phone" ngModel required/>
+      <input type='text' placeholder="Firstname" formControlName='firstname'/>  
+        <div class='text-danger' *ngIf="contact.get('firstname').hasError('required') && contact.get('firstname').touched">
+          Firstname is required!
+        </div>  
+      <input type='text' placeholder="Lastname" formControlName='lastname' />
+        <div class='text-danger' *ngIf="contact.get('lastname').hasError('required') && contact.get('lastname').touched">
+          Lastname is required!
+        </div>
+      <input type='text' placeholder="Phone" formControlName='phone' />
+        <div class='text-danger' *ngIf="contact.get('phone').hasError('required') && contact.get('phone').touched">
+          Phone is required!
+        </div>
     </div>
-    <button type='submit' class="btn btn-secondary" [disabled]="!form.form.valid"> Add Contact </button>    
+
+    <button type='submit' [disabled]="contact.invalid" class="btn btn-secondary"> Add Contact </button>    
   </form>
+
+  <!-- first name -->
+  
+  
+ 
+ 
 </div>

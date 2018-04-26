@@ -13,7 +13,7 @@ import { ContactListComponent } from './page1/contact-list/contact-list.componen
 import { Page2Component } from './page2/page2.component';
 
 import { ContactService } from './services/contact.service';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: 'page1', component: Page1Component },
@@ -34,8 +34,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    FormsModule,
+    HttpClientModule,  
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),
   ],
   providers: [ContactService],

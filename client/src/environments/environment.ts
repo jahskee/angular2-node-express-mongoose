@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiurl: ''
+  apiurl: 'http://stratteos.us'
 };

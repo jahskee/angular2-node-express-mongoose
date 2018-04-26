@@ -1,5 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { ContactService } from '../../services/contact.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 @Component({
   selector: 'app-add-contact-form',
   templateUrl: './add-contact-form.component.html',
@@ -7,23 +9,27 @@ import { ContactService } from '../../services/contact.service';
 })
 
 export class AddContactFormComponent {
-  
-  @Output() addContactEvent = new EventEmitter();
 
   constructor(private contactService: ContactService) { }
+
+  @Output() addContactEvent = new EventEmitter();
+
+  contact: FormGroup;
+  ngOnInit() {
+    this.contact = new FormGroup({
+      firstname: new FormControl('', Validators.required),
+      lastname: new FormControl('', Validators.required),
+      phone: new FormControl('', Validators.required),
+    });
+  }
   
-  clickAddContact(formObj:any):void {
-    console.log(formObj);
-
-    const contactObj = {
-      firstname: formObj.firstname,
-      lastname: formObj.lastname,
-      phone: formObj.phone,
-    }; 
-
+  onSubmit() {   
+    const contactObj = this.contact.value;
+    
     this.contactService.createContact(contactObj).subscribe(data => {
       this.addContactEvent.emit();
       console.log('create new contact success!');
+      this.contact.reset();
     });
 
     console.log('contact: '+JSON.stringify(contactObj))
