@@ -1,4 +1,4 @@
-# Assignment #7 - Final Project
+# Angular2 + Node + Express + Mongoose 
 
 ## Website
   http://www.stratteos.us:8080
@@ -21,6 +21,3 @@
   
 
 Thank you!
-=======
-# angular2-node-express-mongoose
-Angular2 and Node.JS application - MEAN Stack
