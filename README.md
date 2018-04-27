@@ -1,9 +1,9 @@
 # MEAN Stack
 
-## Angular 2 Front-End
+## Angular 2
   http://stratteos.us:8080
 
-## Node.JS, Express, Mongoose REST API - Back-End
+## Node.JS, Express, Mongoose REST API
 
   List - http://stratteos.us:8080/api/contacts
 
