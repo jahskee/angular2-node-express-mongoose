@@ -18,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 const routes: Routes = [
   { path: 'page1', component: Page1Component },
   { path: 'page2/:contactId', component: Page2Component },
-  { path: '', redirectTo: '/page1', pathMatch: 'full' },
+  { path: '', component: Page1Component },
+  { path: '**', component: Page1Component },
 ];
 
 

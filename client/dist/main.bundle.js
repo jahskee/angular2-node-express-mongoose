@@ -108,7 +108,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var routes = [
     { path: 'page1', component: __WEBPACK_IMPORTED_MODULE_7__page1_page1_component__["a" /* Page1Component */] },
     { path: 'page2/:contactId', component: __WEBPACK_IMPORTED_MODULE_10__page2_page2_component__["a" /* Page2Component */] },
-    { path: '', redirectTo: '/page1', pathMatch: 'full' },
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_7__page1_page1_component__["a" /* Page1Component */] },
+    { path: '**', component: __WEBPACK_IMPORTED_MODULE_7__page1_page1_component__["a" /* Page1Component */] },
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {

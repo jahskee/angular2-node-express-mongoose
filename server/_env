@@ -3,5 +3,5 @@
 DB_USER=xxx
 DB_PASSWORD=xxxx
 DB_DATABASE=cscie31
-PORT='8080'
+PORT='80'
 API_HOST='http://stratteos.us'

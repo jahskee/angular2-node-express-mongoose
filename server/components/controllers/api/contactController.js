@@ -38,7 +38,7 @@ contactController.read = async (req, res) => {
     res.json(contact)
   } catch (err) {
     console.log(`no record found: ${err}`);
-    res.end({errorMsg: 'no records found'});
+    res.end();
   }
   return contact;
 }

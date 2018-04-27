@@ -39,20 +39,19 @@ const webContacts = require('./components/routes/web/web-contacts');
 const apiContacts = require('./components/routes/api/api-contacts');
 
 // setup routers and controllers
-
 app.use('/contacts', webContacts);
 
 // setup api
 app.use('/api/contacts', apiContacts);
 
-// add angular files in web root path
-app.use('/', express.static('../client/dist'));
+// add angular files
+app.use('/', express.static(path.join(__dirname,'../client/dist')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
 	var err = new Error('Not Found');
 	err.status = 404;
-	next(err);
+	res.redirect('/');
 });
 
 // error handler
