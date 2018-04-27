@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Assignment #7 - Final Project
 
 ## Website
@@ -21,3 +22,7 @@
   
 
 Thank you!
+=======
+# angular2-node-express-mongoose
+Angular2 and Node.JS application - MEAN Stack
+>>>>>>> be41376d1f28c04c20d4853986f17511362d66ee
