@@ -16,9 +16,16 @@ export class ContactService {
     return this.http.get(this.apiurl + '/api/contacts/' + id);
   }
   
-  createContact(contactObj) {
- 
+  createContact(contactObj) { 
     return this.http.post(this.apiurl + '/api/contacts/create', contactObj);
-
   }
+
+  deleteContact(id) {
+    return this.http.delete(this.apiurl + '/api/contacts/delete/' + id);
+  }
+
+  updateContact(contactObj) {
+    return this.http.put(this.apiurl + '/api/contacts/update', contactObj);
+  }
+
 }

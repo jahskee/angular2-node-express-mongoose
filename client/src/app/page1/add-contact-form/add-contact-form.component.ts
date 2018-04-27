@@ -14,6 +14,9 @@ export class AddContactFormComponent {
 
   @Output() addContactEvent = new EventEmitter();
 
+  message = '';
+  isShowMessage = false;
+
   contact: FormGroup;
   ngOnInit() {
     this.contact = new FormGroup({
@@ -31,8 +34,14 @@ export class AddContactFormComponent {
       console.log('create new contact success!');
       this.contact.reset();
     });
-
+    this.message = 'Contact created.'
+    this.isShowMessage = true;
     console.log('contact: '+JSON.stringify(contactObj))
+  }
+
+  formClick(){
+    this.message = '';
+    this.isShowMessage = false;
   }
 
 }

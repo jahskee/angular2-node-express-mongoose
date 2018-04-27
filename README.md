@@ -1,5 +1,23 @@
-# Assignment #6 - Angular
+# Assignment #7 - Final Project
 
-The description of this assignment can be found in Canvas at [Assignment #6](https://canvas.harvard.edu/courses/35096/assignments/207194) (Spring 2018)
+## Website
+  http://www.stratteos.us:8080
 
-You should build your application in this repo cloned for you in Github Classroom. You'll submit your github URL in Canvas.
+## Express REST API
+
+  List - http://stratteos.us:8080/api/contacts
+
+  Create - http://stratteos.us:8080/api/contacts/create  (pass contacts object in body,  method=POST)
+  
+  Read - http://stratteos.us:8080/api/contacts/[id]      (method=GET) 
+  
+  Update - http://stratteos.us:8080/api/contacts/update  (pass contact object in body, method=PUT)
+  
+  Delete - http://stratteos.us:8080/api/contacts/delete/[id] (method=DELETE)
+  
+## Data Provider
+
+  MongoDB Atlas
+  
+
+Thank you!
