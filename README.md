@@ -1,6 +1,6 @@
 # Angular2 + Node + Express + Mongoose 
 
-## Website
+## Angular 2
   http://www.stratteos.us:8080
 
 ## Express REST API
